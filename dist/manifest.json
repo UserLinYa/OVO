@@ -26,7 +26,7 @@
   "sources": 70,
   "stats": {
     "cache_hits": 70,
-    "cache_skips": 0,
+    "cache_skips": 49,
     "channels_known": 54,
     "channels_selected": 43,
     "dropped_dead": 0,
@@ -37,10 +37,10 @@
       "卫视频道": 27,
       "央视频道": 16
     },
-    "probe_failed": 49,
+    "probe_failed": 0,
     "probe_ok": 0,
-    "probes_planned": 49,
-    "probes_run": 49,
+    "probes_planned": 0,
+    "probes_run": 0,
     "raw_sources": 82,
     "sources_selected": 70,
     "valid_sources": 49,
