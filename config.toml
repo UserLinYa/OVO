@@ -212,7 +212,7 @@ required_kbps = {}
 files = ["sources"]
 
 # 远程播放列表（M3U/TXT/JSON 自动识别），可写多个
-playlists = []
+playlists = ["https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",]
 
 # 下载远程播放列表的超时和最大体积
 fetch_timeout = 15.0
