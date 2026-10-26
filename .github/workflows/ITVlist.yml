@@ -1,0 +1,116 @@
+name: Build IPTV playlist
+
+on:
+  schedule:
+    # GitHub Actions 使用 UTC；每 3 小时运行一次。
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      force_probe:
+        description: "忽略测速缓存 TTL，强制复测"
+        type: boolean
+        default: false
+      no_probe:
+        description: "跳过测速（仅预览抓取结果）"
+        type: boolean
+        default: false
+      offline:
+        description: "离线运行（只用本地文件和已有缓存）"
+        type: boolean
+        default: false
+      groups:
+        description: "只输出指定分组，逗号分隔；留空表示全部"
+        type: string
+        default: ""
+      max_probes:
+        description: "覆盖单轮最大测速数；留空使用 config.toml"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-playlist
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: "1"
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Show environment
+        run: |
+          python --version
+          echo "runner: $RUNNER_OS"
+          echo "workspace: $GITHUB_WORKSPACE"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build playlist
+        env:
+          FORCE_PROBE: ${{ github.event.inputs.force_probe || 'false' }}
+          NO_PROBE: ${{ github.event.inputs.no_probe || 'false' }}
+          OFFLINE: ${{ github.event.inputs.offline || 'false' }}
+          GROUPS: ${{ github.event.inputs.groups || '' }}
+          MAX_PROBES: ${{ github.event.inputs.max_probes || '' }}
+        run: |
+          args=(--config config.toml)
+          if [ "$FORCE_PROBE" = "true" ]; then args+=(--force-probe); fi
+          if [ "$NO_PROBE" = "true" ]; then args+=(--no-probe); fi
+          if [ "$OFFLINE" = "true" ]; then args+=(--offline); fi
+          if [ -n "$GROUPS" ]; then args+=(--groups "$GROUPS"); fi
+          if [ -n "$MAX_PROBES" ]; then args+=(--max-probes "$MAX_PROBES"); fi
+          python ITVlist.py "${args[@]}"
+
+      - name: Summarize output
+        if: always()
+        run: python scripts/summarize.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload output
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: iptv-output
+          if-no-files-found: warn
+          path: |
+            dist
+            speed_report.txt
+            itvlist.txt
+            state
+
+      - name: Commit incremental results
+        if: success()
+        run: |
+          set -euo pipefail
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          for path in dist state; do
+            if [ -e "$path" ]; then git add -A "$path"; fi
+          done
+          for file in itvlist.txt speed_report.txt; do
+            if [ -f "$file" ]; then git add "$file"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(iptv): update playlist ${GITHUB_RUN_NUMBER}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

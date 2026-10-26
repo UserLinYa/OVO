@@ -1,0 +1,2 @@
+# 本项目无第三方运行时依赖。
+# 需要 Python 3.11+（使用标准库 tomllib / urllib / asyncio / zoneinfo）。

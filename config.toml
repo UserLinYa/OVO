@@ -1,0 +1,243 @@
+# ============================================================================
+# 定制版 IPTV 增量管道配置
+# 运行：python ITVlist.py --config config.toml
+# ============================================================================
+
+[app]
+# 输出中的时间使用该时区（默认北京时间）
+timezone = "Asia/Shanghai"
+
+# 频道白名单；脚本只保留这里出现的频道/别名
+demo_file = "Demo.txt"
+
+# 增量状态目录（probe_cache / library / run_state）
+state_dir = "state"
+
+# 播放列表输出目录（按需分组文件也在这里）
+output_dir = "dist"
+
+# 独立测速报告，不参与播放器订阅
+report_file = "speed_report.txt"
+
+# 兼容旧订阅地址的 TXT 文件；设为空字符串可关闭
+legacy_txt_file = "itvlist.txt"
+
+log_level = "INFO"
+
+
+[filters]
+# true：只保留 Demo.txt 中的频道；false：所有频道都保留
+require_demo = true
+
+# 是否允许 Demo.txt 之外的频道（require_demo=true 时通常保持 false）
+allow_unknown = false
+
+# 只输出这些分组；留空表示全部。例：["央视频道", "卫视频道"]
+include_groups = []
+
+# 频道原名包含这些词时丢弃（大小写不敏感）
+exclude_name_keywords = []
+
+# 播放地址包含这些片段时丢弃
+exclude_url_keywords = ["/paiptv/", "/00/SNM/", "/00/CHANNEL"]
+
+allowed_schemes = ["http", "https"]
+max_url_length = 4096
+
+
+[logo]
+# 统一台标模板；{id} 会替换为 EPG ID（如 CCTV-1），{name} 为频道名
+enabled = true
+template = "https://www.xn--rgv465a.top/tvlogo/{id}.png"
+
+# 个别频道台标覆盖（取消注释即可使用）：
+[logo.overrides]
+# "CCTV1" = "https://example.com/logos/cctv1.png"
+
+
+[output]
+# 同时输出 M3U（播放器推荐）和 TXT（兼容旧订阅）
+formats = ["m3u", "txt"]
+
+# 每个频道最多保留几个源。3 个足够播放器自动切换，同时显著减小体积
+max_sources_per_channel = 5
+min_sources_per_channel = 1
+
+# 是否按分组额外输出文件（dist/groups/央视频道.m3u 等）
+per_group = true
+per_group_formats = ["m3u"]
+group_dir = "groups"
+
+playlist_name = "playlist.m3u"
+txt_name = "iptv.txt"
+
+# 同时写根目录 itvlist.txt，兼容旧订阅链接
+legacy_txt = true
+
+# EPG 地址，例如 "https://epg.example.com/epg.xml.gz"；留空则不写
+epg_url = ""
+
+# tvg-id 风格：dash => CCTV-1；name => CCTV1
+tvg_id_style = "dash"
+
+# 是否在 M3U 中额外写 #EXTGRP 行（体积略增，兼容性略好）
+extgrp = false
+
+# 分组顺序（同时用于频道排序的组优先级）
+group_order = [
+  "央视频道",
+  "卫视频道",
+  "地方频道",
+  "港澳台",
+  "体育",
+  "影视",
+  "新闻",
+  "少儿",
+  "纪录片",
+  "音乐",
+  "其他",
+]
+
+include_empty_groups = false
+
+# 写进 M3U 的注释行；留空可进一步减小体积
+header_comment = ""
+
+# 同一地址被多个频道引用时，是否只保留优先级最高的频道
+dedupe_urls_across_channels = false
+
+# 源带 #EXTVLCOPT User-Agent/Referer 时，是否在输出 M3U 中保留
+include_vlc_options = true
+
+# 在播放列表末尾追加“更新时间”条目，并附带提示地址
+append_update_entry = true
+update_entry_url = "http://123.MP4"
+
+write_manifest = true
+clean_stale_group_files = true
+
+
+[probe]
+enabled = true
+
+# 同时测速的 URL 数；GitHub Actions 上 24~40 比较稳妥
+concurrency = 32
+# 同一域名最多同时测几个，避免把源站打挂
+per_host = 4
+
+# 每个源最多读取多少字节；越大越准，但越慢、流量越大。
+# 384 KB 按 16 KB 窗口读取 ≈ 24 个样本，才能算出中位速率/抖动/停顿。
+sample_bytes = 393216
+# 采样时间预算（秒）：读满 sample_bytes 或采够该时长，先到先停
+sample_seconds = 3.0
+min_sample_bytes = 16384
+# 超过该时长没有字节到达、且明显长于常态间隔，计为一次停顿（重缓冲信号）
+stall_seconds = 0.35
+
+timeout = 5.0
+connect_timeout = 3.0
+max_seconds = 14.0
+retries = 1
+
+# 部分源证书不规范；默认关闭校验
+tls_verify = false
+
+# 成功源的缓存时间。18 小时 + 每 3 小时调度 ≈ 每天只复测约 2 次
+success_ttl_hours = 18
+# 失败源的缓存时间，避免每轮重复打失效地址
+failure_ttl_minutes = 30
+# 超过该时间未复测成功的源不再输出
+stale_after_hours = 96
+# 源从抓取结果中消失后，库中最多再保留多久
+retain_hours = 168
+
+# 连续失败几次后隔离/清理
+drop_after_failures = 2
+quarantine_hours = 24
+
+# 每个频道最多保留多少候选，以及每轮最多额外尝试多少新源
+max_candidates_per_channel = 8
+max_new_per_channel = 5
+
+# 全局测速预算：无论抓到多少源，单轮最多测这么多 URL
+max_probes_per_run = 450
+
+# 主播放列表选码率时不超过该值（kbps）
+max_variant_kbps = 12000
+
+# 可覆盖 User-Agent；headers 中的键值会附加到每个测速请求
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+headers = {}
+
+
+# ============================================================================
+# 播放源排序：按"流畅度"而不是"测速最快"
+#
+# 流畅度 = 码率充足度(34%) + 抖动平稳度(30%) + 停顿(16%)
+#        + 首帧延迟(8%) + 历史可靠性(12%)
+# 旧版按一次突发峰值速度排序，突发快的源经常抖动大、首帧慢、偶发失败，
+# 播放器默认选它就卡。改成流畅度后：
+#   - 用中位窗口速率而不是峰值，够用即满分（再快也不会更流畅）
+#   - 抖动大、有停顿的源大幅降权
+#   - 历史上失败过的源分数被压低（成功 EWMA）
+# ============================================================================
+[ranking]
+# smoothness（默认）= 流畅度评分；speed = 恢复旧的"实测速度降序"
+mode = "smoothness"
+
+# 五个分量权重（会自动归一化，不必凑成 1）
+w_speed = 0.34
+w_stability = 0.30
+w_stall = 0.16
+w_latency = 0.08
+w_reliability = 0.12
+
+# 码率达到"需求 * speed_safety"即满分
+speed_safety = 1.2
+# 稳定性 = 1/(1 + jitter_scale * 变异系数)；越大越看重平稳
+jitter_scale = 2.0
+# 排序分数的分桶粒度：1.0 = 1 分一档；调大可以让播放列表更不容易换位
+score_bucket = 1.0
+# 流畅度低于该分数的源不再输出（0 = 不淘汰）
+min_smooth_score = 0.0
+
+# 清晰度 → 不卡顿所需码率(kbps)。显式覆盖内置表，例如：
+# required_kbps = { "1080p" = 5000, "720p" = 3000 }
+required_kbps = {}
+
+
+[sources]
+# 本地源文件/目录：支持 .m3u/.m3u8/.txt/.text/.json
+# 目录不存在时自动跳过
+files = ["sources"]
+
+# 远程播放列表（M3U/TXT/JSON 自动识别），可写多个
+playlists = []
+
+# 下载远程播放列表的超时和最大体积
+fetch_timeout = 15.0
+max_bytes = 5000000
+
+
+[sources.zubo]
+# 原 zubo 酒店源扫描：每个 JSON API 只请求一次，不再“先探测再下载”
+enabled = true
+
+ip_urls_url = "https://raw.githubusercontent.com/UserLinYa/zubo/main/ip_urls.txt"
+
+json_paths = [
+  "/iptv/live/1000.json?key=txiptv",
+  "/iptv/live/1001.json?key=txiptv",
+  "/ZHGXTV/Public/json/live_interface.txt",
+]
+
+octet_start = 1
+octet_end = 254
+
+scan_concurrency = 120
+scan_timeout = 1.5
+# 单轮扫描候选上限，防止意外放大请求
+max_scan_urls = 12000
+
+# 同一份扫描结果复用多久；0 表示每轮都扫描
+interval_hours = 6.0

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+tests/_tmp/
+tests/_output/
+*.log
+
+# 本地临时调试文件
+_tmp_*

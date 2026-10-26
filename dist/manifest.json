@@ -1,0 +1,50 @@
+{
+  "channels": 43,
+  "epg_url": "",
+  "files": [
+    "dist/playlist.m3u",
+    "dist/iptv.txt",
+    "itvlist.txt",
+    "dist/groups/央视频道.m3u",
+    "dist/groups/卫视频道.m3u",
+    "speed_report.txt"
+  ],
+  "generated_at": "2026-10-25T17:34:52+08:00",
+  "groups": [
+    {
+      "channels": 16,
+      "name": "央视频道",
+      "sources": 31
+    },
+    {
+      "channels": 27,
+      "name": "卫视频道",
+      "sources": 39
+    }
+  ],
+  "playlist_updated_at": "2026-10-25T17:34:52+08:00",
+  "sources": 70,
+  "stats": {
+    "cache_hits": 70,
+    "cache_skips": 0,
+    "channels_known": 54,
+    "channels_selected": 43,
+    "dropped_dead": 0,
+    "duplicate_sources": 0,
+    "files": 2,
+    "filtered_sources": 28,
+    "groups": {
+      "卫视频道": 27,
+      "央视频道": 16
+    },
+    "probe_failed": 0,
+    "probe_ok": 0,
+    "probes_planned": 0,
+    "probes_run": 0,
+    "raw_sources": 69,
+    "sources_selected": 70,
+    "valid_sources": 41,
+    "warnings": []
+  },
+  "version": 1
+}
