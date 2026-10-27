@@ -237,7 +237,7 @@ octet_end = 254
 scan_concurrency = 120
 scan_timeout = 1.5
 # 单轮扫描候选上限，防止意外放大请求
-max_scan_urls = 24000
+max_scan_urls = 96000
 
 # 同一份扫描结果复用多久；0 表示每轮都扫描
 interval_hours = 0
