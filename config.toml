@@ -163,7 +163,7 @@ max_new_per_channel = 5
 max_probes_per_run = 450
 
 # 主播放列表选码率时不超过该值（kbps）
-max_variant_kbps = 24000
+max_variant_kbps = 12000
 
 # 可覆盖 User-Agent；headers 中的键值会附加到每个测速请求
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -237,7 +237,7 @@ octet_end = 254
 scan_concurrency = 120
 scan_timeout = 1.5
 # 单轮扫描候选上限，防止意外放大请求
-max_scan_urls = 12000
+max_scan_urls = 24000
 
 # 同一份扫描结果复用多久；0 表示每轮都扫描
-interval_hours = 6.0
+interval_hours = 0
