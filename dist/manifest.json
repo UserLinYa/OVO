@@ -14,36 +14,36 @@
     {
       "channels": 16,
       "name": "央视频道",
-      "sources": 73
+      "sources": 57
     },
     {
       "channels": 33,
       "name": "卫视频道",
-      "sources": 126
+      "sources": 102
     }
   ],
   "playlist_updated_at": "2026-10-27T15:53:15+08:00",
-  "sources": 199,
+  "sources": 159,
   "stats": {
     "cache_hits": 200,
-    "cache_skips": 191,
+    "cache_skips": 142,
     "channels_known": 54,
     "channels_selected": 49,
-    "dropped_dead": 191,
+    "dropped_dead": 232,
     "duplicate_sources": 0,
-    "files": 2,
-    "filtered_sources": 33,
+    "files": 3,
+    "filtered_sources": 610,
     "groups": {
       "卫视频道": 33,
       "央视频道": 16
     },
-    "probe_failed": 0,
+    "probe_failed": 94,
     "probe_ok": 0,
-    "probes_planned": 0,
-    "probes_run": 0,
-    "raw_sources": 82,
-    "sources_selected": 199,
-    "valid_sources": 49,
+    "probes_planned": 94,
+    "probes_run": 94,
+    "raw_sources": 941,
+    "sources_selected": 159,
+    "valid_sources": 331,
     "warnings": []
   },
   "version": 1
