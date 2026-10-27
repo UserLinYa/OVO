@@ -26,24 +26,24 @@
   "sources": 159,
   "stats": {
     "cache_hits": 200,
-    "cache_skips": 142,
+    "cache_skips": 191,
     "channels_known": 54,
     "channels_selected": 49,
-    "dropped_dead": 232,
+    "dropped_dead": 277,
     "duplicate_sources": 0,
-    "files": 3,
-    "filtered_sources": 610,
+    "files": 2,
+    "filtered_sources": 33,
     "groups": {
       "卫视频道": 33,
       "央视频道": 16
     },
-    "probe_failed": 94,
+    "probe_failed": 45,
     "probe_ok": 0,
-    "probes_planned": 94,
-    "probes_run": 94,
-    "raw_sources": 941,
+    "probes_planned": 45,
+    "probes_run": 45,
+    "raw_sources": 82,
     "sources_selected": 159,
-    "valid_sources": 331,
+    "valid_sources": 49,
     "warnings": []
   },
   "version": 1
