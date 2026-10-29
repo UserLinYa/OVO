@@ -1,5 +1,5 @@
 # 频道播放源流畅度报告（按流畅度评分从高到低，已包含持续码率/抖动/停顿/首帧/历史可靠性）
-# 生成时间: 26/10/29-05:57:48（北京时间）
+# 生成时间: 26/10/29-11:17:52（北京时间）
 # 频道	分组	排名	流畅度	有效码率(kbps)	平均(kbps)	抖动CV	停顿	首帧(ms)	采样(bytes)	方式	清晰度	地址
 CCTV1	央视频道	1	7.3	202.9	559.2	1.04	3	4153	212992	hls	-	http://1.198.67.43:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV2	央视频道	1	9.9	389.0	429.4	0.43	4	2745	180224	hls	-	http://1.198.67.43:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -13,6 +13,7 @@ CCTV9	央视频道	1	10.1	524.3	715.9	0.58	3	2979	278528	hls	-	http://1.198.67.4
 CCTV10	央视频道	1	12.3	633.6	702.5	0.25	2	2585	278528	hls	-	http://1.198.67.43:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV11	央视频道	1	7.7	205.3	553.3	0.84	4	2704	245760	hls	-	http://1.198.67.43:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV12	央视频道	1	7.5	170.5	393.0	0.86	4	2706	180224	hls	-	http://1.198.67.43:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV13	央视频道	1	15.8	1463.2	1245.8	0.42	1	2108	393216	hls	-	http://1.198.67.43:9901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV14	央视频道	1	8.9	318.3	434.8	0.64	3	2584	163840	hls	-	http://1.198.67.43:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV15	央视频道	1	17.6	1021.7	1135.4	0.39	0	2670	393216	hls	-	http://1.198.67.43:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17	央视频道	1	7.8	221.6	462.7	0.80	4	2819	180224	hls	-	http://1.198.67.43:9901/tsfile/live/1027_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -21,6 +22,7 @@ CCTV17	央视频道	1	7.8	221.6	462.7	0.80	4	2819	180224	hls	-	http://1.198.67.4
 广东卫视	卫视频道	1	9.9	568.4	610.8	0.56	5	2779	229376	hls	-	http://1.198.67.43:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
 江苏卫视	卫视频道	1	9.0	368.7	465.3	0.62	4	2653	180224	hls	-	http://1.198.67.43:9901/tsfile/live/0127_1.m3u8?key=txiptv&playlive=1&authid=0
 广西卫视	卫视频道	1	11.0	632.8	610.8	0.39	5	3059	229376	hls	-	http://1.198.67.43:9901/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南卫视	卫视频道	1	22.2	1708.5	1765.7	0.30	0	1213	393216	hls	-	http://1.198.67.43:9901/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0
 贵州卫视	卫视频道	1	11.7	652.6	690.0	0.24	5	2334	262144	hls	-	http://1.198.67.43:9901/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0
 深圳卫视	卫视频道	1	8.4	370.8	601.8	0.63	5	2840	229376	hls	-	http://1.198.67.43:9901/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
 四川卫视	卫视频道	1	10.2	628.0	762.9	0.65	3	3114	294912	hls	-	http://1.198.67.43:9901/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0
