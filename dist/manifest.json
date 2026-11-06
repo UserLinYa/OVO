@@ -9,7 +9,7 @@
     "dist/groups/卫视频道.m3u",
     "speed_report.txt"
   ],
-  "generated_at": "2026-11-06T18:18:28+08:00",
+  "generated_at": "2026-11-07T02:54:33+08:00",
   "groups": [
     {
       "channels": 16,
@@ -19,31 +19,31 @@
     {
       "channels": 33,
       "name": "卫视频道",
-      "sources": 132
+      "sources": 135
     }
   ],
-  "playlist_updated_at": "2026-11-06T18:18:28+08:00",
-  "sources": 209,
+  "playlist_updated_at": "2026-11-07T02:54:33+08:00",
+  "sources": 212,
   "stats": {
-    "cache_hits": 177,
-    "cache_skips": 316,
+    "cache_hits": 228,
+    "cache_skips": 362,
     "channels_known": 54,
     "channels_selected": 49,
-    "dropped_dead": 586,
+    "dropped_dead": 577,
     "duplicate_sources": 0,
     "files": 3,
-    "filtered_sources": 678,
+    "filtered_sources": 874,
     "groups": {
       "卫视频道": 33,
       "央视频道": 16
     },
-    "probe_failed": 91,
-    "probe_ok": 144,
-    "probes_planned": 235,
-    "probes_run": 235,
-    "raw_sources": 989,
-    "sources_selected": 209,
-    "valid_sources": 311,
+    "probe_failed": 112,
+    "probe_ok": 95,
+    "probes_planned": 207,
+    "probes_run": 207,
+    "raw_sources": 1360,
+    "sources_selected": 212,
+    "valid_sources": 486,
     "warnings": []
   },
   "version": 1
