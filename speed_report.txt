@@ -1,11 +1,11 @@
 # 频道播放源流畅度报告（按流畅度评分从高到低，已包含持续码率/抖动/停顿/首帧/历史可靠性）
-# 生成时间: 26/11/15-03:51:11（北京时间）
+# 生成时间: 26/11/15-08:29:21（北京时间）
 # 频道	分组	排名	流畅度	有效码率(kbps)	平均(kbps)	抖动CV	停顿	首帧(ms)	采样(bytes)	方式	清晰度	地址
 CCTV1	央视频道	1	61.9	5089.0	4144.1	0.00	0	1262	393216	hls	-	http://114.241.110.52:85/tsfile/live/1/1001_1.m3u8?key=txiptv
 CCTV1	央视频道	2	23.0	1553.9	1541.7	0.31	0	1262	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV1	央视频道	3	13.3	1024.6	1107.2	0.84	1	1388	393216	hls	-	http://106.115.27.198:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV1	央视频道	4	12.7	155.5	215.0	0.35	0	3243	81920	hls	-	http://101.66.199.96:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV1	央视频道	5	11.8	459.3	378.4	0.53	1	1298	196608	hls	-	http://120.196.235.42:9901/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV1	央视频道	3	16.2	1304.3	1219.8	0.41	1	1543	393216	hls	-	http://106.115.27.111:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV1	央视频道	4	13.3	1024.6	1107.2	0.84	1	1388	393216	hls	-	http://106.115.27.198:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV1	央视频道	5	12.7	155.5	215.0	0.35	0	3243	81920	hls	-	http://101.66.199.96:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=0&authid=0
 CCTV2	央视频道	1	60.8	5004.2	4115.4	0.00	0	1273	393216	hls	-	http://114.241.110.52:85/tsfile/live/2/1002_1.m3u8?key=txiptv
 CCTV2	央视频道	2	58.6	2313.7	2866.1	0.00	0	1380	393216	hls	-	http://106.115.27.198:9901/tsfile/live/faacts/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV2	央视频道	3	41.9	1559.2	3040.4	0.00	0	1624	196608	hls	-	http://106.115.27.111:9901/tsfile/live/faacts/1001_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -20,7 +20,7 @@ CCTV4	央视频道	1	22.4	509.8	764.7	0.00	0	6157	49152	hls	-	http://106.115.27.
 CCTV4	央视频道	2	19.3	612.3	679.0	0.33	0	3041	262144	hls	-	http://106.115.27.198:9901/tsfile/live/faacts/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV4	央视频道	3	18.4	498.7	498.2	0.50	1	1338	245760	hls	-	http://120.196.235.42:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV4	央视频道	4	12.5	763.0	899.3	0.76	1	1297	344064	hls	-	http://114.241.110.52:85/tsfile/live/4/1004_1.m3u8?key=txiptv
-CCTV4	央视频道	5	7.8	168.4	550.3	1.13	2	1384	212992	hls	-	http://106.115.27.238:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV4	央视频道	5	9.9	588.2	778.8	0.60	4	1843	294912	hls	-	http://1.198.67.32:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV5	央视频道	1	68.2	5170.2	4171.2	0.00	0	1271	393216	hls	-	http://114.241.110.52:85/tsfile/live/5/1005_1.m3u8?key=txiptv
 CCTV5	央视频道	2	20.3	1521.4	1894.7	0.44	0	1383	393216	hls	-	http://106.115.27.198:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV5	央视频道	3	14.1	291.4	346.7	0.27	0	2296	131072	hls	-	http://101.66.199.181:9901/tsfile/live/0005_1.m3u8?key=txiptv&playlive=0&authid=0
@@ -35,7 +35,7 @@ CCTV7	央视频道	1	19.5	1278.6	1478.7	0.50	0	1299	393216	hls	-	http://114.241.
 CCTV7	央视频道	2	19.3	1276.3	1664.8	0.71	0	1291	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=0&authid=0
 CCTV7	央视频道	3	16.3	494.7	618.8	0.22	0	1334	245760	hls	-	http://120.196.235.42:9901/tsfile/live/1027_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV7	央视频道	4	14.9	209.8	255.6	0.13	0	3054	98304	hls	-	http://101.66.199.96:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV7	央视频道	5	11.3	456.4	896.5	1.19	1	1444	360448	hls	-	http://106.115.27.198:9901/tsfile/live/faacts/1031_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV7	央视频道	5	11.5	479.7	673.5	0.89	1	1540	344064	hls	-	http://106.115.27.111:9901/tsfile/live/faacts/1031_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV8	央视频道	1	62.4	4686.3	4000.7	0.00	0	1300	393216	hls	-	http://114.241.110.52:85/tsfile/live/8/1008_1.m3u8?key=txiptv
 CCTV8	央视频道	2	16.8	939.9	986.7	0.30	1	1383	376832	hls	-	http://101.66.199.181:9901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=0&authid=0
 CCTV8	央视频道	3	16.7	239.3	329.0	0.39	0	3097	131072	hls	-	http://101.66.199.96:9901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=0&authid=0
@@ -43,9 +43,9 @@ CCTV8	央视频道	4	15.1	21.4	42.8	0.00	0	3668	32768	hls	-	http://49.234.31.101
 CCTV8	央视频道	5	13.9	751.2	690.8	0.43	1	1301	294912	hls	-	http://120.196.235.42:9901/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV9	央视频道	1	16.1	386.6	452.6	0.17	0	1437	180224	hls	-	http://101.66.199.181:9901/tsfile/live/0009_1.m3u8?key=txiptv&playlive=0&authid=0
 CCTV9	央视频道	2	13.1	242.2	330.6	0.43	0	2514	131072	hls	-	http://101.66.199.96:9901/tsfile/live/0009_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV9	央视频道	3	12.1	381.3	426.3	0.38	1	1319	163840	hls	-	http://120.196.235.42:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV9	央视频道	4	11.5	128.3	211.7	0.61	0	3378	98304	hls	-	http://49.234.31.101:7316/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV9	央视频道	5	10.0	542.7	1130.7	1.32	1	1349	393216	hls	-	http://106.115.27.198:9901/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV9	央视频道	3	13.0	60.0	109.6	0.22	0	3562	49152	hls	-	http://61.136.172.236:9901/tsfile/live/0009_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV9	央视频道	4	12.1	381.3	426.3	0.38	1	1319	163840	hls	-	http://120.196.235.42:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV9	央视频道	5	11.5	128.3	211.7	0.61	0	3378	98304	hls	-	http://49.234.31.101:7316/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV10	央视频道	1	62.2	5127.2	4156.8	0.00	0	1279	393216	hls	-	http://114.241.110.52:85/tsfile/live/10/1010_1.m3u8?key=txiptv
 CCTV10	央视频道	2	17.7	1234.0	3229.7	1.11	0	1250	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=0&authid=0
 CCTV10	央视频道	3	14.7	197.6	233.0	0.14	0	2990	98304	hls	-	http://101.66.199.96:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=0&authid=0
@@ -74,12 +74,13 @@ CCTV14	央视频道	5	14.3	205.5	244.5	0.18	0	3048	98304	hls	-	http://101.66.199
 CCTV15	央视频道	1	92.8	131072.0	131072.0	0.00	0	7108	16384	hls	-	http://61.136.172.236:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV15	央视频道	2	60.2	4951.8	4097.2	0.00	0	1273	393216	hls	-	http://114.241.110.52:85/tsfile/live/15/1015_1.m3u8?key=txiptv
 CCTV15	央视频道	3	23.4	501.1	478.3	0.29	0	1309	180224	hls	-	http://101.66.199.181:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV15	央视频道	4	19.1	297.1	463.1	0.00	0	6043	49152	hls	-	http://106.115.27.198:9901/tsfile/live/faacts/1039_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV15	央视频道	5	16.1	219.0	280.3	0.41	0	3054	131072	hls	-	http://101.66.199.96:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=0&authid=0
+CCTV15	央视频道	4	21.6	835.2	943.8	0.44	0	1250	360448	hls	-	http://106.115.27.111:9901/tsfile/live/faacts/1039_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV15	央视频道	5	19.1	297.1	463.1	0.00	0	6043	49152	hls	-	http://106.115.27.198:9901/tsfile/live/faacts/1039_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17	央视频道	1	50.6	4143.2	3747.7	0.00	0	1403	393216	hls	-	http://106.115.27.238:9901/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17	央视频道	2	12.5	56.0	104.1	0.32	0	1392	49152	hls	-	http://106.115.27.198:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17	央视频道	3	8.7	458.3	878.7	0.94	2	1812	393216	hls	-	http://49.234.31.101:7316/tsfile/live/1032_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17	央视频道	4	8.5	396.1	635.6	1.09	1	4796	180224	hls	-	http://106.115.27.111:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV17	央视频道	5	8.0	211.7	523.0	0.85	5	1328	229376	hls	-	http://1.198.67.32:9901/tsfile/live/1027_1.m3u8?key=txiptv&playlive=1&authid=0
 安徽卫视	卫视频道	1	62.4	5150.4	4164.5	0.00	0	1266	393216	hls	-	http://114.241.110.52:85/tsfile/live/29/1029_1.m3u8?key=txiptv
 安徽卫视	卫视频道	2	21.6	1377.1	1848.8	0.48	0	1288	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0130_1.m3u8?key=txiptv&playlive=0&authid=0
 安徽卫视	卫视频道	3	16.2	393.6	430.2	0.48	0	1390	163840	hls	-	http://106.115.27.198:9901/tsfile/live/faacts/0130_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -106,10 +107,10 @@ CCTV17	央视频道	4	8.5	396.1	635.6	1.09	1	4796	180224	hls	-	http://106.115.27
 浙江卫视	卫视频道	4	14.8	182.9	217.5	0.12	0	3999	98304	hls	-	http://101.66.199.96:9901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=0&authid=0
 浙江卫视	卫视频道	5	11.5	516.2	516.3	0.69	1	1299	196608	hls	-	http://120.196.235.42:9901/tsfile/live/1049_1.m3u8?key=txiptv&playlive=1&authid=0
 广东卫视	卫视频道	1	60.0	4934.4	4091.0	0.00	0	1276	393216	hls	-	http://114.241.110.52:85/tsfile/live/45/1045_1.m3u8?key=txiptv
-广东卫视	卫视频道	2	19.4	1411.9	1508.3	0.20	0	1591	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=0&authid=0
-广东卫视	卫视频道	3	15.1	28.1	56.2	0.00	0	3722	32768	hls	-	http://61.136.172.236:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
-广东卫视	卫视频道	4	13.2	217.1	237.8	0.25	0	3918	98304	hls	-	http://101.66.199.96:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=0&authid=0
-广东卫视	卫视频道	5	10.5	674.4	587.5	0.82	2	1356	262144	hls	-	http://106.115.27.238:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
+广东卫视	卫视频道	2	40.9	3093.3	3212.1	0.00	0	1252	393216	hls	-	http://106.115.27.198:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
+广东卫视	卫视频道	3	27.0	2085.9	1930.2	0.24	0	1860	393216	hls	-	http://1.198.67.32:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
+广东卫视	卫视频道	4	19.4	1411.9	1508.3	0.20	0	1591	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=0&authid=0
+广东卫视	卫视频道	5	15.1	28.1	56.2	0.00	0	3722	32768	hls	-	http://61.136.172.236:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
 江苏卫视	卫视频道	1	55.6	4518.2	3935.2	0.00	0	1314	393216	hls	-	http://114.241.110.52:85/tsfile/live/28/1028_1.m3u8?key=txiptv
 江苏卫视	卫视频道	2	47.9	1463.3	1406.2	0.61	0	2503	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0
 江苏卫视	卫视频道	3	21.6	999.0	1068.7	0.00	0	5452	147456	hls	-	http://106.115.27.198:9901/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -172,9 +173,9 @@ CCTV17	央视频道	4	8.5	396.1	635.6	1.09	1	4796	180224	hls	-	http://106.115.27
 黑龙江卫视	卫视频道	5	12.3	842.7	1074.0	0.67	3	1254	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0143_1.m3u8?key=txiptv&playlive=0&authid=0
 吉林卫视	卫视频道	1	60.2	4949.3	4096.8	0.00	0	1288	393216	hls	-	http://114.241.110.52:85/tsfile/live/47/1047_1.m3u8?key=txiptv
 吉林卫视	卫视频道	2	22.2	577.4	2341.2	1.02	0	1266	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=0&authid=0
-吉林卫视	卫视频道	3	12.4	55.4	102.4	0.25	0	4118	49152	hls	-	http://61.136.172.236:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0
-吉林卫视	卫视频道	4	11.2	805.9	955.4	0.89	1	1801	360448	hls	-	http://49.234.31.101:7316/tsfile/live/1070_1.m3u8?key=txiptv&playlive=1&authid=0
-吉林卫视	卫视频道	5	10.8	492.8	415.5	0.71	1	1342	212992	hls	-	http://106.115.27.238:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0
+吉林卫视	卫视频道	3	14.6	1064.8	1488.9	0.96	0	1304	393216	hls	-	http://106.115.27.198:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0
+吉林卫视	卫视频道	4	12.4	55.4	102.4	0.25	0	4118	49152	hls	-	http://61.136.172.236:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0
+吉林卫视	卫视频道	5	11.2	805.9	955.4	0.89	1	1801	360448	hls	-	http://49.234.31.101:7316/tsfile/live/1070_1.m3u8?key=txiptv&playlive=1&authid=0
 江西卫视	卫视频道	1	61.4	5064.2	4135.4	0.00	0	1299	393216	hls	-	http://114.241.110.52:85/tsfile/live/37/1037_1.m3u8?key=txiptv
 江西卫视	卫视频道	2	19.6	1153.9	1264.4	0.28	0	1405	393216	hls	-	http://106.115.27.198:9901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
 江西卫视	卫视频道	3	20.5	983.4	1225.4	0.17	0	2671	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=0&authid=0
@@ -182,6 +183,7 @@ CCTV17	央视频道	4	8.5	396.1	635.6	1.09	1	4796	180224	hls	-	http://106.115.27
 江西卫视	卫视频道	5	14.2	159.6	182.3	0.13	0	2475	81920	hls	-	http://106.115.27.238:9901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
 宁夏卫视	卫视频道	1	20.4	405.7	452.8	0.29	0	4528	180224	hls	-	http://49.234.31.101:7316/tsfile/live/1092_1.m3u8?key=txiptv&playlive=1&authid=0
 宁夏卫视	卫视频道	2	18.6	579.6	725.6	0.74	1	1351	294912	hls	-	http://120.196.235.42:9901/tsfile/live/1083_1.m3u8?key=txiptv&playlive=1&authid=0
+宁夏卫视	卫视频道	3	8.7	394.5	797.9	0.90	5	1227	327680	hls	-	http://1.198.67.32:9901/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0
 山东卫视	卫视频道	1	37.4	1069.7	1278.8	0.55	0	1244	393216	hls	-	http://101.66.199.181:9901/tsfile/live/0131_1.m3u8?key=txiptv&playlive=0&authid=0
 山东卫视	卫视频道	2	13.6	396.2	472.6	0.48	0	3058	180224	hls	-	http://120.196.235.42:9901/tsfile/live/1057_1.m3u8?key=txiptv&playlive=1&authid=0
 山东卫视	卫视频道	3	14.2	374.0	409.6	0.26	0	4124	131072	hls	-	http://49.234.31.101:7316/tsfile/live/1056_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -214,7 +216,9 @@ CCTV17	央视频道	4	8.5	396.1	635.6	1.09	1	4796	180224	hls	-	http://106.115.27
 西藏卫视	卫视频道	1	12.6	267.3	309.3	0.70	1	3312	180224	hls	-	http://120.196.235.42:9901/tsfile/live/1084_1.m3u8?key=txiptv&playlive=1&authid=0
 西藏卫视	卫视频道	2	8.8	53.5	126.5	0.93	1	2508	65536	hls	-	http://49.234.31.101:7316/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
 内蒙古卫视	卫视频道	1	95.5	5123.2	4116.0	0.00	0	1268	393216	hls	-	http://114.241.110.52:85/tsfile/live/50/1050_1.m3u8?key=txiptv
+内蒙古卫视	卫视频道	2	9.6	257.7	512.1	0.68	5	1429	229376	hls	-	http://1.198.67.32:9901/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&authid=0
 新疆卫视	卫视频道	1	39.1	1281.9	1487.8	0.53	0	3274	393216	hls	-	http://49.234.31.101:7316/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
+新疆卫视	卫视频道	2	10.2	513.3	551.3	0.56	4	1528	212992	hls	-	http://1.198.67.32:9901/tsfile/live/0110_1.m3u8?key=txiptv&playlive=1&authid=0
 三沙卫视	卫视频道	1	47.4	1561.8	1793.7	0.59	0	1817	393216	hls	-	http://49.234.31.101:7316/tsfile/live/1083_1.m3u8?key=txiptv&playlive=1&authid=0
 兵团卫视	卫视频道	1	18.5	483.1	443.1	0.40	1	1355	180224	hls	-	http://120.196.235.42:9901/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
 兵团卫视	卫视频道	2	13.4	128.3	214.3	0.49	0	4368	65536	hls	-	http://49.234.31.101:7316/tsfile/live/1096_1.m3u8?key=txiptv&playlive=1&authid=0
