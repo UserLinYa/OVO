@@ -1,5 +1,5 @@
 {
-  "channels": 46,
+  "channels": 47,
   "epg_url": "https://live.fanmingming.cn/e.xml",
   "files": [
     "dist/playlist.m3u",
@@ -9,41 +9,41 @@
     "dist/groups/卫视频道.m3u",
     "speed_report.txt"
   ],
-  "generated_at": "2026-11-18T07:03:17+08:00",
+  "generated_at": "2026-11-18T12:47:38+08:00",
   "groups": [
     {
       "channels": 16,
       "name": "央视频道",
-      "sources": 76
+      "sources": 80
     },
     {
-      "channels": 30,
+      "channels": 31,
       "name": "卫视频道",
-      "sources": 124
+      "sources": 133
     }
   ],
-  "playlist_updated_at": "2026-11-18T07:03:17+08:00",
-  "sources": 200,
+  "playlist_updated_at": "2026-11-18T12:47:38+08:00",
+  "sources": 213,
   "stats": {
-    "cache_hits": 206,
-    "cache_skips": 192,
+    "cache_hits": 218,
+    "cache_skips": 250,
     "channels_known": 54,
-    "channels_selected": 46,
-    "dropped_dead": 924,
+    "channels_selected": 47,
+    "dropped_dead": 778,
     "duplicate_sources": 0,
-    "files": 3,
-    "filtered_sources": 576,
+    "files": 2,
+    "filtered_sources": 33,
     "groups": {
-      "卫视频道": 30,
+      "卫视频道": 31,
       "央视频道": 16
     },
-    "probe_failed": 63,
-    "probe_ok": 181,
-    "probes_planned": 244,
-    "probes_run": 244,
-    "raw_sources": 1094,
-    "sources_selected": 200,
-    "valid_sources": 518,
+    "probe_failed": 75,
+    "probe_ok": 151,
+    "probes_planned": 226,
+    "probes_run": 226,
+    "raw_sources": 82,
+    "sources_selected": 213,
+    "valid_sources": 49,
     "warnings": []
   },
   "version": 1
